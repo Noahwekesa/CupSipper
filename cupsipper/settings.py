@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # Third part apps 
     "markdownx",
+    'widget_tweaks',
     # my apps
     "notes",
     "users",
