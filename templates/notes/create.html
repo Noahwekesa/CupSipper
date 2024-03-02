@@ -1,0 +1,18 @@
+{% extends "_base.html" %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+
+<form method="post">
+  {% csrf_token %}
+  {{ form|crispy}}
+  <div class="row">
+    <div class="col">
+   <button hx-post="{% url 'save_data' %}" hx-swap="outerHTML" hx-target="#your-element-id">Save</button>
+</div>
+    <div class="col">
+  <button class="btn btn-outline-primary" type="submit">Save</button>
+  </div>
+  </div>
+</form>
+{% endblock content %}

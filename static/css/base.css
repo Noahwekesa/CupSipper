@@ -13,12 +13,16 @@ html {
 
 body {
   margin-bottom: 60px; /* Margin bottom by footer height */
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .container {
   max-width: 960px;
 }
-a:hover {
+.nav-link:hover {
   text-decoration: underline;
 }
 

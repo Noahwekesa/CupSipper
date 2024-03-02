@@ -30,10 +30,12 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "django_tables2",
     "django_extensions",
+    "django_htmx",
     # Local
     "accounts",
     "pages",
     "notes",
+    "django_browser_reload",
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#middleware
@@ -48,6 +50,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "allauth.account.middleware.AccountMiddleware",  # django-allauth
+    "django_htmx.middleware.HtmxMiddleware",  # htmx
+    "django_browser_reload.middleware.BrowserReloadMiddleware",  # django reload
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#root-urlconf
@@ -161,7 +165,7 @@ AUTH_USER_MODEL = "accounts.CustomUser"
 SITE_ID = 1
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-redirect-url
-LOGIN_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "dashboard"
 
 # https://django-allauth.readthedocs.io/en/latest/views.html#logout-account-logout
 ACCOUNT_LOGOUT_REDIRECT_URL = "home"

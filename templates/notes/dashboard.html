@@ -1,16 +1,11 @@
 {% extends '_base.html' %}
-
-{% load render_table from django_tables2 %}
+{% load crispy_forms_tags %}
 {% block content %}
-<div>
- {% render_table notes %}
-
-{% comment %}
-
- {% for note in notes %}
-  <h1>{{note.title}}</h1>
-  {% endfor %}
-
-{% endcomment %}
+<a class="btn btn-primary fw-bold" hx-get="{% url 'create_notes_view' %}" hx-target=".create-note-form">Write Notes</a>
+  <hr />
+ <div class="row">
+    <div class="col">
+      {% include "notes/notes-list.html" %}
+  </div>
   </div>
 {% endblock content %}
