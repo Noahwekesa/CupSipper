@@ -18,6 +18,9 @@ body {
 .container {
   max-width: 960px;
 }
+a:hover {
+  text-decoration: underline;
+}
 
 .pricing-header {
   max-width: 700px;

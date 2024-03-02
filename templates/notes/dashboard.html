@@ -1,8 +1,16 @@
 {% extends '_base.html' %}
+
+{% load render_table from django_tables2 %}
 {% block content %}
 <div>
-  {% for note in notes %}
+ {% render_table notes %}
+
+{% comment %}
+
+ {% for note in notes %}
   <h1>{{note.title}}</h1>
   {% endfor %}
+
+{% endcomment %}
   </div>
 {% endblock content %}
