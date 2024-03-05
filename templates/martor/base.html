@@ -1,0 +1,58 @@
+{% load static %}<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>{% block title %}Cup Sipper - Note Taking App{% endblock %}</title>
+    <link
+      href="{% static 'plugins/css/bootstrap.min.css' %}"
+      type="text/css"
+      media="all"
+      rel="stylesheet"
+    />
+    <style>
+      .main-container {
+        margin-top: 3em;
+      }
+    </style>
+    {% block css %}{% endblock %}
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand text-black" href="{% url 'home' %}"> Home </a>
+        <ul class="navbar-nav">
+          <li>
+            <a class="nav-link text-black" href="{% url 'dashboard' %}"
+              >Go Back</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="ui container main-container">
+      <div class="main-content">
+        {% block messages %} {% if messages %}
+        <div class="messages">
+          {% for message in messages %}
+          <div
+            class="alert alert-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %}"
+          >
+            {{ message }}
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %} {% endblock %} {% block content %}{% endblock %}
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="{% static 'plugins/js/jquery.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'plugins/js/bootstrap.min.js' %}"
+    ></script>
+    {% block js %}{% endblock %}
+  </body>
+</html>
