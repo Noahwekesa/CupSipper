@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from .tables import NoteTable
 from .models import Note
 from .forms import CreateNoteForm
+from django.conf import settings
 
 
 @login_required
