@@ -1,28 +1,32 @@
-{% extends '_base.html' %}
-{% load static %}
-
-{% block title %}Home page{% endblock title %}
-
+{% extends '_base.html' %} {% load static %}
+{% block title %}CupSipper - Home page{% endblock title %}
 {% block content %}
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-<div class="m-5">
-<h1>CupSipper - Seamlesly Manage Your Notes</h1>
-  <p class="lead text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis mollitia</p>
-  <a class="btn btn-primary fw-bold" href="{% url 'account_signup' %}">Get started now</a>
-
+  <div class="m-5">
+    <h1>CupSipper - Seamlesly Manage Your Notes</h1>
+    <p class="lead text-muted">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis mollitia
+    </p>
+    <a class="btn btn-primary fw-bold" href="{% url 'account_signup' %}">Get started now</a>
   </div>
-<div class="mt-5">
-  <h6 class="text-primary m-5 shadow-md">A versatile Markdown editor</h6>
-<div class="row">
-  <div class="col">
-
-  ok
+  <div class="mt-3 px-4 py-4 section rounded-lg">
+    <h6 class="text-primary m-5 shadow-md">A versatile Markdown editor</h6>
+    <div class="row">
+      <div class="col">
+        <h3 class="text-xl">
+          Solely designed for Markdown to improve your workflow
+        </h3>
+        <p>
+          Get a low-friction personal note-taking workflow and accomplish more.
+          With your notes well-organized effortlessly, you can stay focused on
+          doing your best work.
+        </p>
+      </div>
+      <div class="col">
+        <img src="{% static 'images/notebook.jpg' %}" class="img-fluid rounded-start" />
+      </div>
+    </div>
   </div>
-<div class="col">
-  <img src="{% static 'images/notebook.jpg' %}" class="img-fluid rounded-start"/>
-  </div>
-  </div>
-
 </div>
 {% endblock content %}

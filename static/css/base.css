@@ -25,6 +25,9 @@ body {
 .nav-link:hover {
   text-decoration: underline;
 }
+.section {
+  background-color: #eeefe1;
+}
 
 .pricing-header {
   max-width: 700px;
